@@ -5,11 +5,11 @@ ENV PGSSLMODE disable
 
 RUN bash -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 RUN apt-get update && apt-get upgrade -y --allow-unauthenticated
-RUN apt-get install wget ca-certificates software-properties-common -y --no-install-recommends
+RUN apt-get install wget ca-certificates software-properties-common -y
 RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
 RUN wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 RUN apt-get update && apt-get upgrade -y --allow-unauthenticated
-RUN apt-get install libicu55 libpq-dev postgresql-10 git gcc make rbenv ruby-build -y  --allow-unauthenticated --no-install-recommends
+RUN apt-get install libicu55 libpq-dev postgresql-10 git gcc make rbenv ruby-build -y  --allow-unauthenticated
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 RUN bash -c 'source ~/.bashrc'
 RUN rbenv install 2.4.0
