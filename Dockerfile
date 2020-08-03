@@ -1,4 +1,4 @@
-FROM hseeberger/scala-sbt:8u222_1.3.2_2.12.10
+FROM hseeberger/scala-sbt:8u252_1.3.10_2.12.11
 USER root
 
 ENV PGSSLMODE=disable\
