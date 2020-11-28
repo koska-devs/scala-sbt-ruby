@@ -15,5 +15,5 @@ RUN bash -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
       bash -c 'source ~/.bashrc' &&\
       rbenv install 2.4.0 &&\
       rbenv global 2.4.0 &&\
-      rbenv exec gem install bundler &&\
+      rbenv exec gem install bundler
 
